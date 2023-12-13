@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminDashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Desk</a></li>
+                <li id="loginLogout"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <main class="dashboard">
+        <section class="actions">
+            <h2>Add Product</h2>
+            <form id="addProductForm">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" required>
+                <label for="productDesc">Product Description:</label>
+                <input type="text" id="productDesc" name="productDesc" required>
+                <label for="productPrice">Product Price:</label>
+                <input type="text" id="productPrice" name="productPrice" required>
+                <label for="productImage">Product Image:</label>
+                <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                <button type="button" onclick="addProduct()">Add Product</button>
+            </form>
+        </section>
+        <section class="actions">
+            <h2>Remove Product</h2>
+            <label for="products">Select a product:</label>
+            <select id="products" name="products">
+                <!-- Product options will be dynamically populated -->
+            </select>
+            <button type="button" onclick="removeProduct()">Remove Product</button>
+        </section>
+    </main>
+    <!-- <script src="sample.js"></script> -->
+    <script src="adminDashboard.js" defer></script>
+
+</body>
+</html>

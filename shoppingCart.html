@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="shoppingCart.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Online Store</h1>
+        <nav>
+            <ul>
+                <li><a onclick="redirectToHome()">Home</a></li>
+                <li><a onclick="redirectToAbout()">About</a></li>
+                <li><a onclick="redirectToHelp()">Help</a></li>
+                <li><a onclick="redirectToHome()">Continue Shopping</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shopping-cart">
+            <h2>Your Shopping Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Subtotal</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here using JavaScript -->
+                </tbody>
+            </table>
+            <div class="cart-total">
+                <!-- Display Order Summary Information -->
+                <div id="order-summary" class="order-summary">
+                    <h3>Items in Your Order</h3>
+                    <!-- ... (same as previous code) ... -->
+
+                    <!-- Additional Features -->
+                    <label for="discount-code">Discount Code:</label>
+                    <input type="text" id="discount-code" name="discount-code">
+                    <button type="button" onclick="applyDiscount()">Apply Discount</button>
+                </div>
+
+                <h3 id="total-price">Total: $0.00</h3> <!-- Moved total price here -->
+
+                <!-- Place Order Button -->
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+                <!-- <a href="">Continue Shopping</a> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 My Online Store</p>
+    </footer>
+
+    <script src="shoppingCart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listings</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Online Store</h1>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Help</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Login</a>
+            <!-- Consider using server-side logic to dynamically show either Login or Logout based on user authentication status -->
+        </nav>
+    </header>
+    <main>
+        <section class="filter-container">
+            <div class="filter-section">
+                <h2 class="filter-title">CATEGORIES</h2>
+                <ul class="filter-options">
+                    <li class="checkbox-label"><input type="checkbox" id="category-tshirts"><label for="category-tshirts">Tshirts</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-lounge-tshirts"><label for="category-lounge-tshirts">Shirts</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-hoodie"><label for="category-hoodie">Hoodies</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-sweatshirt"><label for="category-sweatshirt">Sweatshirt</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-pants"><label for="category-pant">Pants</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-trouser"><label for="category-trouser">Trouser</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-jeans"><label for="category-jeans">Jeans</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-shoes"><label for="category-shoes">Shoes</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-sneakers"><label for="category-sneakers">Sneakers</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="category-crocs"><label for="category-crocs">Crocs</label></li>
+                    <!-- Add more categories as needed -->
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h2 class="filter-title">BRAND</h2>
+                <ul class="filter-options">
+                    <li class="checkbox-label"><input type="checkbox" id="brand-roadster"><label for="brand-roadster">Roadster</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="brand-hrx"><label for="brand-hrx">HRX</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="brand-nike"><label for="brand-nike">Nike</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="brand-puma"><label for="brand-puma">Puma</label></li>
+                    <li class="checkbox-label"><input type="checkbox" id="brand-h&m"><label for="brand-h&m">H&M</label></li>
+                    <!-- Add more brands as needed -->
+                </ul>
+            </div>
+            <!-- Add more filter sections as needed -->
+            <button class="apply-button" onclick="applyFilters()">Apply</button>
+        </section>
+        <div class="grid-container">
+            <div class="card">
+                <img src="product1.jpg" alt="Product 1">
+                <div class="title">Product 1</div>
+                <div class="price">$99.99</div>
+                <!-- Removed product description -->
+                <a href="" class="button">View Details</a>
+            </div>
+            <!-- Add more product cards here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2022 My Online Store</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
